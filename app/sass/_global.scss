@@ -1,0 +1,41 @@
+*, input, select, textarea, option, button {
+    outline: none!important;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: $font-primary;
+    font-size: 1.125rem;
+    font-weight: 300;
+
+    .no-margin {
+        margin: 0;
+    }
+
+    .no-padding {
+        padding: 0;
+    }
+
+    .heading {
+        color: #414141;
+        font-size: 1.875rem;
+        font-weight: bold;
+        position: relative;
+        margin-top: 86px;
+        text-align: center;
+        padding-bottom: 55px;
+        text-transform: uppercase;
+
+        &:before {
+            position: absolute;
+            content: '';
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: url('../images/icon/heading-icon.svg');
+            width: 86px;
+            height: 86px;
+        }
+    }
+}

@@ -1,0 +1,167 @@
+.footer {
+    background: #102A4D;
+    padding: 60px 0 0;
+    border-top: 15px $color-primary solid;
+    position: relative;
+    color: $white;
+    font-size: 0.875rem;
+    line-height: 1.875rem;
+
+    a {
+        color: $white;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &:before {
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+        content: '';
+        background: $color-secondary;
+        width: 360px;
+        height: 15px;
+    }
+
+    &__logo {
+        margin-bottom: 40px;
+        display: inline-block;
+
+        img {
+            width: 130px;
+        }
+    }
+
+    &__address {
+        list-style: none;
+        padding-left: 20px;
+
+        strong {
+            font-weight: bold;
+        }
+
+        li {
+            i {
+                margin-right: 5px;
+            }
+
+        }
+    }
+
+    &__contact {
+        list-style: none;
+        padding-left: 20px;
+
+        i {
+            margin-right: 4px;
+        }
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        position: relative;
+        line-height: 1.25rem;
+        margin-bottom: 50px;
+        display: inline-block;
+
+        &:before {
+            position: absolute;
+            top: 130%;
+            left: -5px;
+            content: '';
+            width: 70px;
+            height: 1px;
+            background: $color-secondary;
+        }
+    }
+
+    &__list {
+        padding-left: 13px;
+        list-style: none;
+    }
+
+    &__item {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: '';
+            right: calc(100% + 13px);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 8px;
+            background: $color-secondary;
+        }
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: center;
+        color: $white;
+        background: #0A192C;
+        align-items: center;
+        padding: 10px 0;
+
+        @media (max-width: 375px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (max-width: $screen-lg) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        &__company {
+            img {
+                width: 94px;
+            }
+        }
+    }
+
+    &__box {
+
+        @media (max-width: $screen-lg) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .footer__logo {
+            @media (max-width: $screen-lg) {
+                text-align: center;
+            }
+        }
+
+        .footer__address {
+
+            @media (max-width: $screen-lg) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            li {
+                &:last-child {
+                    @media (max-width: $screen-lg) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        .footer__contact {
+
+            @media (max-width: $screen-lg) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}

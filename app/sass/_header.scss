@@ -1,0 +1,193 @@
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 8;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+
+    &:before {
+        background: $color-secondary;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        z-index: -1;
+    }
+
+    &__main {
+        padding: 30px 55px;
+        transition: all 0.5s ease;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: $screen-xl;
+        margin: 0 auto;
+
+        
+        @media (max-width: $screen-lg) {
+            padding: 23px 15px;
+        }
+
+        @media (max-width: $screen-sm) {
+            padding: 11px;
+        }
+    }
+
+    &__menu {
+        flex-grow: 1;
+
+        @media (max-width: $screen-sm) {
+            flex-grow: 3;
+        }
+    }
+
+    &__logo {
+
+        img {
+            width: 100%;
+            transition: all 0.5s ease;
+            height: 72px;
+
+            @media (max-width: $screen-sm) {
+                width: 150px;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .top {
+        flex-grow: 2;
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: $screen-sm) {
+            flex-grow: 1;
+        }
+
+        &__list {
+            display: flex;
+            list-style: none;
+        }
+
+        &__item {
+            @media (max-width: $screen-md) {
+                display: none;
+            }
+
+            &--bar {
+                @media (max-width: $screen-md) {
+                    display: block;
+                }
+            }
+        }
+
+        &__link {
+            color: $white;
+            width: 180px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            transition: all 0.5s ease;
+            text-decoration: none;
+            cursor: pointer;
+
+            i {
+                font-size: 32px;
+            }
+            
+            &:hover {
+                color: $color-primary;
+
+                @media (max-width: $screen-sm) {
+                    background: transparent;
+                }
+            }
+
+            &--nav {
+                border: 1px rgba(255,255,255,0.35) solid;
+            }
+
+            &--open {
+                margin-right: 80px;
+
+                @media (max-width: $screen-xl) {
+                    margin-right: 0;
+                }
+            }
+
+            .menu-title {
+                @media (max-width: $screen-sm) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .topcontact {
+        color: $white;
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+
+        &__data {
+            display: flex;
+        }
+
+        &__phone {
+            font-size: 1.25rem;
+            margin-right: 25px;
+
+            a {
+                color: $white;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $color-primary;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+
+        &__email {
+            a {
+                color: $white;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $color-primary;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+
+
+
+        &__icon {
+            margin-right: 8px;
+        }
+    }
+
+    &--black {
+        background: rgba(0,0,0,0.95);
+
+        .header__main {
+            padding: 15px 30px;
+        }
+
+        .header__logo {
+            img {
+                width: 150px;
+            }
+        }
+    }
+}
